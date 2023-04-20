@@ -1,0 +1,1 @@
+Niesom si vedomy nedostatkov alebo zmien
