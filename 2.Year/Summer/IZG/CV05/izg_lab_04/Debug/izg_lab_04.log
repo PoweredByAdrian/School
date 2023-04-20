@@ -1,0 +1,15 @@
+﻿  color.cpp
+  main.cpp
+C:\Programy\SKOLA\IZG\CV05\izg_lab_04\main.cpp(170,21): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Programy\SKOLA\IZG\CV05\izg_lab_04\main.cpp(170,14): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Programy\SKOLA\IZG\CV05\izg_lab_04\main.cpp(294,30): warning C4244: '=': conversion from 'double' to 'Sint16', possible loss of data
+C:\Programy\SKOLA\IZG\CV05\izg_lab_04\main.cpp(295,30): warning C4244: '=': conversion from 'double' to 'Sint16', possible loss of data
+C:\Programy\SKOLA\IZG\CV05\izg_lab_04\main.cpp(297,32): warning C4244: '=': conversion from 'double' to 'Sint16', possible loss of data
+C:\Programy\SKOLA\IZG\CV05\izg_lab_04\main.cpp(298,32): warning C4244: '=': conversion from 'double' to 'Sint16', possible loss of data
+  student.cpp
+C:\Programy\SKOLA\IZG\CV05\izg_lab_04\student.cpp(78,21): warning C4838: conversion from 'int' to 'double' requires a narrowing conversion
+C:\Programy\SKOLA\IZG\CV05\izg_lab_04\student.cpp(78,31): warning C4838: conversion from 'int' to 'double' requires a narrowing conversion
+  vector.cpp
+  Generating Code...
+SDLmain.lib(SDL_win32_main.obj) : warning LNK4099: PDB 'SDLmain.pdb' was not found with 'SDLmain.lib(SDL_win32_main.obj)' or at 'C:\Programy\SKOLA\IZG\CV05\izg_lab_04\Debug\SDLmain.pdb'; linking object as if no debug info
+  izg_lab_04.vcxproj -> C:\Programy\SKOLA\IZG\CV05\izg_lab_04\Debug\izg_lab_04.exe

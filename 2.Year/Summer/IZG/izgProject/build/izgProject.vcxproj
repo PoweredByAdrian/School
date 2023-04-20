@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{58911FC2-B1F7-3595-95B5-6543CC546D82}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>izgProject</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Programy\SKOLA\IZG\izgProject\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">izgProject.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">izgProject</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Programy\SKOLA\IZG\izgProject\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">izgProject.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">izgProject</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Programy\SKOLA\IZG\izgProject\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">izgProject.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">izgProject</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Programy\SKOLA\IZG\izgProject\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">izgProject.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">izgProject</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programy\SKOLA\IZG\izgProject;C:\Programy\SKOLA\IZG\izgProject\libs\json;C:\Programy\SKOLA\IZG\izgProject\libs\stb_image;C:\Programy\SKOLA\IZG\izgProject\libs\SDL2-2.0.20\include;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_ROOT_DIR="C:/Programy/SKOLA/IZG/izgProject";CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_ROOT_DIR=\"C:/Programy/SKOLA/IZG/izgProject\";CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programy\SKOLA\IZG\izgProject;C:\Programy\SKOLA\IZG\izgProject\libs\json;C:\Programy\SKOLA\IZG\izgProject\libs\stb_image;C:\Programy\SKOLA\IZG\izgProject\libs\SDL2-2.0.20\include;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programy\SKOLA\IZG\izgProject;C:\Programy\SKOLA\IZG\izgProject\libs\json;C:\Programy\SKOLA\IZG\izgProject\libs\stb_image;C:\Programy\SKOLA\IZG\izgProject\libs\SDL2-2.0.20\include;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>libs\SDL2-2.0.20\Debug\SDL2d.lib;libs\SDL2-2.0.20\Debug\SDL2maind.lib;libs\ArgumentViewer\Debug\ArgumentViewerd.lib;libs\BasicCamera\Debug\BasicCamerad.lib;user32.lib;gdi32.lib;winmm.lib;imm32.lib;ole32.lib;oleaut32.lib;version.lib;uuid.lib;advapi32.lib;setupapi.lib;shell32.lib;dinput8.lib;libs\TxtUtils\Debug\TxtUtilsd.lib;libs\MealyMachine\Debug\MealyMachined.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Programy/SKOLA/IZG/izgProject/build/Debug/izgProject.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Programy/SKOLA/IZG/izgProject/build/Debug/izgProject.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programy\SKOLA\IZG\izgProject;C:\Programy\SKOLA\IZG\izgProject\libs\json;C:\Programy\SKOLA\IZG\izgProject\libs\stb_image;C:\Programy\SKOLA\IZG\izgProject\libs\SDL2-2.0.20\include;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_ROOT_DIR="C:/Programy/SKOLA/IZG/izgProject";CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_ROOT_DIR=\"C:/Programy/SKOLA/IZG/izgProject\";CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programy\SKOLA\IZG\izgProject;C:\Programy\SKOLA\IZG\izgProject\libs\json;C:\Programy\SKOLA\IZG\izgProject\libs\stb_image;C:\Programy\SKOLA\IZG\izgProject\libs\SDL2-2.0.20\include;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programy\SKOLA\IZG\izgProject;C:\Programy\SKOLA\IZG\izgProject\libs\json;C:\Programy\SKOLA\IZG\izgProject\libs\stb_image;C:\Programy\SKOLA\IZG\izgProject\libs\SDL2-2.0.20\include;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>libs\SDL2-2.0.20\Release\SDL2.lib;libs\SDL2-2.0.20\Release\SDL2main.lib;libs\ArgumentViewer\Release\ArgumentViewer.lib;libs\BasicCamera\Release\BasicCamera.lib;user32.lib;gdi32.lib;winmm.lib;imm32.lib;ole32.lib;oleaut32.lib;version.lib;uuid.lib;advapi32.lib;setupapi.lib;shell32.lib;dinput8.lib;libs\TxtUtils\Release\TxtUtils.lib;libs\MealyMachine\Release\MealyMachine.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Programy/SKOLA/IZG/izgProject/build/Release/izgProject.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Programy/SKOLA/IZG/izgProject/build/Release/izgProject.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programy\SKOLA\IZG\izgProject;C:\Programy\SKOLA\IZG\izgProject\libs\json;C:\Programy\SKOLA\IZG\izgProject\libs\stb_image;C:\Programy\SKOLA\IZG\izgProject\libs\SDL2-2.0.20\include;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_ROOT_DIR="C:/Programy/SKOLA/IZG/izgProject";CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_ROOT_DIR=\"C:/Programy/SKOLA/IZG/izgProject\";CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programy\SKOLA\IZG\izgProject;C:\Programy\SKOLA\IZG\izgProject\libs\json;C:\Programy\SKOLA\IZG\izgProject\libs\stb_image;C:\Programy\SKOLA\IZG\izgProject\libs\SDL2-2.0.20\include;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programy\SKOLA\IZG\izgProject;C:\Programy\SKOLA\IZG\izgProject\libs\json;C:\Programy\SKOLA\IZG\izgProject\libs\stb_image;C:\Programy\SKOLA\IZG\izgProject\libs\SDL2-2.0.20\include;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>libs\SDL2-2.0.20\MinSizeRel\SDL2s.lib;libs\SDL2-2.0.20\MinSizeRel\SDL2mains.lib;libs\ArgumentViewer\MinSizeRel\ArgumentViewers.lib;libs\BasicCamera\MinSizeRel\BasicCameras.lib;user32.lib;gdi32.lib;winmm.lib;imm32.lib;ole32.lib;oleaut32.lib;version.lib;uuid.lib;advapi32.lib;setupapi.lib;shell32.lib;dinput8.lib;libs\TxtUtils\MinSizeRel\TxtUtilss.lib;libs\MealyMachine\MinSizeRel\MealyMachines.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Programy/SKOLA/IZG/izgProject/build/MinSizeRel/izgProject.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Programy/SKOLA/IZG/izgProject/build/MinSizeRel/izgProject.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Programy\SKOLA\IZG\izgProject;C:\Programy\SKOLA\IZG\izgProject\libs\json;C:\Programy\SKOLA\IZG\izgProject\libs\stb_image;C:\Programy\SKOLA\IZG\izgProject\libs\SDL2-2.0.20\include;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_ROOT_DIR="C:/Programy/SKOLA/IZG/izgProject";CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_ROOT_DIR=\"C:/Programy/SKOLA/IZG/izgProject\";CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Programy\SKOLA\IZG\izgProject;C:\Programy\SKOLA\IZG\izgProject\libs\json;C:\Programy\SKOLA\IZG\izgProject\libs\stb_image;C:\Programy\SKOLA\IZG\izgProject\libs\SDL2-2.0.20\include;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Programy\SKOLA\IZG\izgProject;C:\Programy\SKOLA\IZG\izgProject\libs\json;C:\Programy\SKOLA\IZG\izgProject\libs\stb_image;C:\Programy\SKOLA\IZG\izgProject\libs\SDL2-2.0.20\include;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\ArgumentViewer;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\MealyMachine;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\TxtUtils;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera\src;C:\Programy\SKOLA\IZG\izgProject\build\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\BasicCamera;C:\Programy\SKOLA\IZG\izgProject\libs\glm-0.9.9.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>libs\SDL2-2.0.20\RelWithDebInfo\SDL2rd.lib;libs\SDL2-2.0.20\RelWithDebInfo\SDL2mainrd.lib;libs\ArgumentViewer\RelWithDebInfo\ArgumentViewerrd.lib;libs\BasicCamera\RelWithDebInfo\BasicCamerard.lib;user32.lib;gdi32.lib;winmm.lib;imm32.lib;ole32.lib;oleaut32.lib;version.lib;uuid.lib;advapi32.lib;setupapi.lib;shell32.lib;dinput8.lib;libs\TxtUtils\RelWithDebInfo\TxtUtilsrd.lib;libs\MealyMachine\RelWithDebInfo\MealyMachinerd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Programy/SKOLA/IZG/izgProject/build/RelWithDebInfo/izgProject.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Programy/SKOLA/IZG/izgProject/build/RelWithDebInfo/izgProject.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Programy\SKOLA\IZG\izgProject\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Programy/SKOLA/IZG/izgProject/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Programy\CMake\bin\cmake.exe -SC:/Programy/SKOLA/IZG/izgProject -BC:/Programy/SKOLA/IZG/izgProject/build --check-stamp-file C:/Programy/SKOLA/IZG/izgProject/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Programy\CMake\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeCCompiler.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeCXXCompiler.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeRCCompiler.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Programy/SKOLA/IZG/izgProject/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Programy\CMake\bin\cmake.exe -SC:/Programy/SKOLA/IZG/izgProject -BC:/Programy/SKOLA/IZG/izgProject/build --check-stamp-file C:/Programy/SKOLA/IZG/izgProject/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Programy\CMake\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeCCompiler.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeCXXCompiler.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeRCCompiler.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Programy/SKOLA/IZG/izgProject/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Programy\CMake\bin\cmake.exe -SC:/Programy/SKOLA/IZG/izgProject -BC:/Programy/SKOLA/IZG/izgProject/build --check-stamp-file C:/Programy/SKOLA/IZG/izgProject/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Programy\CMake\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeCCompiler.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeCXXCompiler.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeRCCompiler.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Programy/SKOLA/IZG/izgProject/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Programy\CMake\bin\cmake.exe -SC:/Programy/SKOLA/IZG/izgProject -BC:/Programy/SKOLA/IZG/izgProject/build --check-stamp-file C:/Programy/SKOLA/IZG/izgProject/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Programy\CMake\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Programy\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeCCompiler.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeCXXCompiler.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeRCCompiler.cmake;C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\3.23.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Programy\SKOLA\IZG\izgProject\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\student\fwd.hpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\student\gpu.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\student\drawModel.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\student\drawModel.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\framework\arguments.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\framework\main.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\framework\window.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\framework\window.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\framework\method.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\framework\application.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\framework\application.hpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\framework\timer.hpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\framework\bunny.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\framework\bunny.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\framework\framebuffer.hpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\framework\textureData.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\framework\textureData.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\framework\model.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\framework\model.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\framework\systemSpecific.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\framework\systemSpecific.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\examples\emptyMethod.hpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\examples\triangleMethod.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\examples\triangleMethod.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\examples\triangleClip1Method.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\examples\triangleClip1Method.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\examples\triangleClip2Method.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\examples\triangleClip2Method.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\examples\triangle3DMethod.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\examples\triangle3DMethod.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\examples\triangleBufferMethod.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\examples\triangleBufferMethod.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\examples\czFlagMethod.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\examples\czFlagMethod.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\examples\phongMethod.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\examples\phongMethod.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\examples\texturedQuadMethod.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\examples\texturedQuadMethod.cpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\examples\skFlagMethod.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\examples\skFlagMethod.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\examples\modelMethod.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\examples\modelMethod.hpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\libs\tiny_gltf\tiny_gltf.h" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\libs\stb_image\stb_image.h" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\libs\stb_image\stb_image_write.h" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\libs\json\json.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\libs\impl.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\tests\renderMethodFrame.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\tests\renderMethodFrame.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\tests\takeScreenShot.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\tests\takeScreenShot.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\tests\conformanceTests.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\tests\conformanceTests.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\tests\performanceTest.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\tests\performanceTest.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\tests\testCommon.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\tests\testCommon.cpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\tests\vertexShaderTests.cpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\tests\fragmentShaderTests.cpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\tests\clippingTests.cpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\tests\drawModelTests.cpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\tests\finalImageTest.cpp" />
+    <ClInclude Include="C:\Programy\SKOLA\IZG\izgProject\tests\saveFrame.hpp" />
+    <ClCompile Include="C:\Programy\SKOLA\IZG\izgProject\tests\saveFrame.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Programy\SKOLA\IZG\izgProject\build\ZERO_CHECK.vcxproj">
+      <Project>{48FABC7C-A4AC-3F85-AD56-9CAC20A4226A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer\ArgumentViewer.vcxproj">
+      <Project>{BB517938-0CAB-3CEE-B5FC-19EAC1F11F2A}</Project>
+      <Name>ArgumentViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Programy\SKOLA\IZG\izgProject\build\libs\BasicCamera\BasicCamera.vcxproj">
+      <Project>{3B964277-CF63-3E9D-B16D-2A4A7557CDDF}</Project>
+      <Name>BasicCamera</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Programy\SKOLA\IZG\izgProject\build\libs\MealyMachine\MealyMachine.vcxproj">
+      <Project>{8D1E3D23-5856-3ADD-92E4-CC1019CD8A34}</Project>
+      <Name>MealyMachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Programy\SKOLA\IZG\izgProject\build\libs\SDL2-2.0.20\SDL2-static.vcxproj">
+      <Project>{CB096829-2D90-3A52-B2FD-BB96A72C1C6C}</Project>
+      <Name>SDL2-static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Programy\SKOLA\IZG\izgProject\build\libs\SDL2-2.0.20\SDL2main.vcxproj">
+      <Project>{8947CEEA-C83E-3C70-8E83-4295E62A1DC9}</Project>
+      <Name>SDL2main</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Programy\SKOLA\IZG\izgProject\build\libs\TxtUtils\TxtUtils.vcxproj">
+      <Project>{1545BE09-D394-3571-8D96-6E442E4DD2EC}</Project>
+      <Name>TxtUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

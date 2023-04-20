@@ -1,0 +1,60 @@
+﻿  gpu.cpp
+  The contents of <bit> are available only with C++20 or later.
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(36,31): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(39,31): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(90,36): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(91,36): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(94,120): warning C4244: '=': conversion from '_Ty' to 'T', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(115,51): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(128,51): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(165,35): warning C4244: '=': conversion from 'float' to 'uint8_t', possible loss of data
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(166,41): warning C4244: '=': conversion from 'float' to 'uint8_t', possible loss of data
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(167,41): warning C4244: '=': conversion from 'float' to 'uint8_t', possible loss of data
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(174,14): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(175,14): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(177,14): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(178,14): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(183,32): warning C4018: '<': signed/unsigned mismatch
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(184,33): warning C4018: '<': signed/unsigned mismatch
+C:\Programy\SKOLA\IZG\izgProject\student\gpu.cpp(279): warning C4715: 'computeVertexID': not all control paths return a value
+  izgProject.vcxproj -> C:\Programy\SKOLA\IZG\izgProject\build\Debug\izgProject.exe

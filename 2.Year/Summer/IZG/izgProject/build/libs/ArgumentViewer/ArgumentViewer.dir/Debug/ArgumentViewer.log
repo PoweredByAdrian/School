@@ -1,0 +1,14 @@
+﻿  Building Custom Rule C:/Programy/SKOLA/IZG/izgProject/libs/ArgumentViewer/CMakeLists.txt
+  ArgumentViewer.cpp
+  ArgumentViewerImpl.cpp
+  Format.cpp
+  ValueFormat.cpp
+  CommonFunctions.cpp
+  LineSplitter.cpp
+  IsPresentFormat.cpp
+  Globals.cpp
+  ArgumentListFormat.cpp
+  ContextFormat.cpp
+  StringVectorFormat.cpp
+  Generating Code...
+  ArgumentViewer.vcxproj -> C:\Programy\SKOLA\IZG\izgProject\build\libs\ArgumentViewer\Debug\ArgumentViewerd.lib

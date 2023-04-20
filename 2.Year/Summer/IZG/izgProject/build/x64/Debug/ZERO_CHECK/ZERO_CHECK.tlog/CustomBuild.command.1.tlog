@@ -1,0 +1,10 @@
+^C:\PROGRAMY\SKOLA\IZG\IZGPROJECT\BUILD\CMAKEFILES\18B1EB6DD3AC4701EBFC78E07686D4B1\GENERATE.STAMP.RULE
+setlocal
+C:\Programy\CMake\bin\cmake.exe -SC:/Programy/SKOLA/IZG/izgProject -BC:/Programy/SKOLA/IZG/izgProject/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Programy/SKOLA/IZG/izgProject/build/izgProject.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
