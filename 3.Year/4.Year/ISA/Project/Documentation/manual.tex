@@ -1,0 +1,262 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{graphics}
+\usepackage{pdflscape}
+\usepackage{float}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+    
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=15cm]{fit_logo_1.png}
+\end{figure}
+    
+
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+
+
+{\Huge \textsc{ISA - technická dokumentácia k projektu}\par}
+
+\bigskip
+{\Huge \textsc{Monitorování DHCP komunikace}\par}
+
+\bigskip
+\Huge 2023/2024
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+    
+\vspace{\stretch{0.7}}
+    
+\end{center}
+    
+\Large  
+            Adrian Horvath  (xhorva14)
+\hfill \today
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+The dhcp-stats program is a tool designed for capturing and analyzing DHCP traffic on a network. The program's primary objective is to assess the percentage of allocated IP addresses relative to the total available addresses within a specified prefix. 
+
+\subsection{DHCP Overview}
+
+In a typical network environment, DHCP operates as a client-server protocol. When a device, known as a DHCP client, connects to the network, it sends out a DHCPDISCOVER message to discover available DHCP servers. DHCP servers respond with a DHCPOFFER, providing the client with an IP address and other configuration parameters.
+
+Upon receiving one or more offers, the client selects a server and sends a DHCPREQUEST message to request the offered configuration. The chosen server responds with a DHCPACK message, confirming the allocation of the IP address and finalizing the configuration.
+
+\subsection{dhcp-stats Objective}
+
+The primary objective of the dhcp-stats program is to assess the percentage of allocated IP addresses relative to the total available addresses within a specified prefix. This information is crucial for network administrators to monitor and manage IP address utilization efficiently.
+
+The program achieves this objective by capturing DHCP packets and extracting relevant information such as IP addresses, message types (e.g., DHCPACK, DHCPRELEASE), and other options specified in the DHCP protocol.
+
+\subsection{DHCP Packet Analysis}
+
+The dhcp-stats program analyzes DHCP packets to determine the allocation status of IP addresses. It identifies key elements in DHCP packets, including the message type, allocated IP addresses, and other options. By examining these elements, the program categorizes packets into ACK (Acknowledgment) and RELEASE types, providing insights into IP address allocation and release activities on the network.
+
+\subsection{Usage}
+
+To use the dhcp-stats program, specify either a network interface using the \texttt{-i} option or a pcap file using the \texttt{-r} option. Additionally, include at least one IP address prefix for analysis. The program then captures and analyzes DHCP packets, presenting information about IP address allocation within the specified prefixes.
+\newline The program is working without timer or steps, if you need stepping (recommended for reading from file), you need to uncomment line 260 //getch() in dhcp-stats.cpp file.
+Program does not count broadcast ip and network ip into maximum number of addresses to be allocated and also ignores ACK packet with such ip (for example, in prefix 10.10.10.0/24 will be max available addresses for allocation 254, and will ignore broadcast (10.10.10.255) and network (10.10.10.0), but /23 this two ip addresses will be counted)
+In case program recieve prefix on input /31 or /32 maximum number of addresses is set to 0, and utilization is also 0\%.
+\subsection{References}
+
+For further information on the DHCP protocol, refer to RFC 2131\footnote{\url{https://datatracker.ietf.org/doc/html/rfc2131}}.
+
+\section{Usage}
+The program is executed from the command line with the following syntax:
+\begin{lstlisting}[language=bash]
+./dhcp-stats [-r <filename>] [-i <interface-name>] <ip-prefix> [ <ip-prefix> [ ... ] ]
+\end{lstlisting}
+
+\section{Command Line Options}
+\begin{itemize}
+    \item \texttt{-r, --filename <filename>}: Specify the name of the file containing captured DHCP packets.
+    \item \texttt{-i, --interface <interface-name>}: Specify the network interface for live packet capture.
+    \item \texttt{<ip-prefix> [ <ip-prefix> [ ... ] ]}: Specify one or more IP address prefixes to analyze.
+\end{itemize}
+
+\section{Application Design}
+\subsection{Overview}
+The program is structured to efficiently capture and analyze DHCP packets, providing valuable statistics related to IP address allocations and utilization within specified network prefixes. The source code is organized into several files, including dhcp-stats.cpp, dhcp-stats.h, and Makefile.
+
+\subsection{Program Components}
+
+\subsubsection{NetworkPrefix Structure}
+The \texttt{NetworkPrefix} structure represents network prefixes and includes key information.
+
+\begin{verbatim}
+struct NetworkPrefix {
+    char prefix[16];            ///< String representing the network prefix (e.g., "192.168.1.0/24").
+    uint32_t ip;                ///< IP address of the network prefix.
+    int prefix_length;          ///< Length of the prefix (e.g., 24 for the example above).
+    uint32_t allocated;         ///< Count of allocated IP addresses in the prefix.
+    uint32_t maxAddress;        ///< Maximum address in the prefix.
+    uint32_t mask;              ///< Subnet mask of the prefix.
+    size_t MAX_PREFIXES;        ///< Maximum number of prefixes.
+};
+\end{verbatim}
+\newpage
+\subsubsection{dhcp\_packet Structure}
+The \texttt{dhcp\_packet} structure represents DHCP packets, capturing essential fields and options.
+
+\begin{verbatim}
+struct dhcp_packet {
+    uint8_t op;              ///< Message opcode: 1 for request, 2 for reply.
+    uint8_t htype;           ///< Hardware address type.
+    uint8_t hlen;            ///< Hardware address length.
+    uint8_t hops;            ///< Number of hops.
+    uint32_t xid;            ///< Transaction ID.
+    uint16_t secs;           ///< Seconds elapsed.
+    uint16_t flags;          ///< Flags.
+    uint32_t ciaddr;         ///< Client IP address.
+    uint32_t yiaddr;         ///< Your client IP address.
+    uint32_t siaddr;         ///< Server IP address.
+    uint32_t giaddr;         ///< Relay agent IP address.
+    uint8_t chaddr[16];      ///< Client hardware address.
+    uint8_t sname[64];       ///< Server host name.
+    uint8_t file[128];       ///< Boot filename.
+    uint32_t magic_cookie;   ///< DHCP magic cookie.
+
+    // Options follow here
+    uint8_t options[576];    ///< Array to store all options.
+};
+\end{verbatim}
+
+\subsubsection{IpHash Structure}
+The \texttt{IpHash} structure defines a hash function for IP addresses, crucial for tracking allocated IP addresses.
+
+\begin{verbatim}
+struct IpHash {
+    std::size_t operator()(const uint32_t& ip) const {
+        // Use a simple hash function for demonstration
+        return std::hash<uint32_t>{}(ip);
+    }
+};
+\end{verbatim}
+
+\subsubsection{Command Line Arguments Structure}
+The \texttt{CommandLineArgs} structure holds command line arguments passed to the program.
+
+\begin{verbatim}
+struct CommandLineArgs {
+    char *interface;        ///< Network interface name.
+    char *filename;         ///< PCAP file name.
+    char **ipPrefixes;      ///< Array of IP prefixes.
+    int ipPrefixCount;      ///< Number of IP prefixes.
+};
+\end{verbatim}
+
+\subsection{Functions}
+Explore various functions such as \texttt{initializePrefixes}, \texttt{openLiveCapture}, \texttt{openFile}, \texttt{packet\_handler}, and more, each serving specific roles in the program.
+
+\newpage
+\section{Implementation Description}
+
+The DHCP Stats program is designed to analyze DHCP packets within a network, providing insights into the allocation of IP addresses within a specified address prefix. The implementation is structured around key functionalities, design decisions, and interesting aspects that contribute to the program's functionality.
+
+\subsection{Command Line Argument Processing}
+
+The program starts by setting up a signal handler for SIGINT and then proceeds to parse command line arguments using the \texttt{getopt} function. The \texttt{argumentCheck} function is responsible for validating the command line arguments, ensuring that either the \texttt{-r} or \texttt{-i} option is used but not both. Additionally, it checks for the presence of at least one IP prefix. The \texttt{isValidPrefix} function is then invoked to validate the format of each provided IP prefix.
+
+\subsection{Network Prefix Initialization}
+
+Upon successful command line argument processing, the program proceeds to initialize network prefixes using the \texttt{initializePrefixes} function. This function sets up the \texttt{NetworkPrefix} structure for each provided IP prefix, extracting relevant information such as the network address, maximum number of allocated IPs, mask, and more.
+
+\subsection{Packet Capture and Processing}
+
+The main function then determines whether to capture packets from a live network interface or read them from a file. Depending on the source, either \texttt{pcap\_open\_live} or \texttt{pcap\_open\_offline} is used to obtain a handler. The \texttt{setPacketFilter} function is responsible for setting up a packet filter to capture only DHCP packets on ports 67 and 68.
+
+The program uses the \texttt{pcap\_loop} function to capture packets in a loop. For each captured packet, the \texttt{packet\_handler} function is invoked. This function extracts relevant DHCP data from the packet and checks for the appropriate ports (according RFC 2131 there can't be same port for source and dest. port in one packet). The \texttt{printOptions} function is then called to analyze the DHCP options and determine if the packet is an acknowledgment (ACK) or release (RELEASE).
+
+\subsection{IP Address Allocation and Prefix Updates}
+
+The \texttt{modifyDataForMatchingPrefix} function manages IP address allocation and updates network prefixes. It checks if the allocated IP is already present in the hash table. If it is an ACK packet, the IP is added to the hash table. If it is a RELEASE packet, the IP is removed from the hash table, and the corresponding network prefix structures are updated.
+
+\subsection{User Interface}
+
+The program utilizes the NCurses library for a user-friendly interface. The \texttt{printPrefixes} function updates and displays information about the network prefixes, allocated IP addresses, and usage statistics in real-time.
+
+\section{Basic Program Information}
+\subsection{Prerequisites}
+Ensure the presence of a C++ compiler, pcap library, and ncurses library before attempting to build and run the program.
+\section{Building and Running}
+\subsection{Building the Program}
+To build the program, use the provided Makefile:
+\begin{lstlisting}[language=bash]
+make
+\end{lstlisting}
+
+\subsection{Running the Program}
+Execute the program with appropriate command line options:
+\begin{lstlisting}[language=bash]
+./dhcp-stats -r DHCPfile.cap 192.168.0.0/24
+\end{lstlisting}
+
+\section{Usage Instructions}
+Detailed instructions on using the DHCP Stats program, including live capture and file analysis.
+
+\begin{itemize}[label=]
+    \item \textbf{Live Capture:} \newline Analyzing DHCP packets on the eth0 interface within the 192.168.1.0/24 address prefix:
+    \begin{lstlisting}[language=bash]
+        ./dhcp-stats -i eth0 192.168.1.0/24
+    \end{lstlisting}
+
+    \item \textbf{File Analysis:} \newline Analyzing DHCP packets from the DHCPcopy.cap file within the 10.0.0.0/16 address prefix:
+    
+    \begin{lstlisting}[language=bash]
+        ./dhcp-stats -r DHCPcopy.cap 10.0.0.0/16
+    \end{lstlisting}
+    
+\end{itemize}
+
+\section{References}
+
+\begin{thebibliography}{3}
+  
+\bibitem{rfc2131}
+  \url{https://datatracker.ietf.org/doc/html/rfc2131}
+
+\bibitem{manpages}
+  \url{https://liw.fi/manpages/}
+
+\bibitem{ncurses-howto}
+  \url{https://tldp.org/HOWTO/NCURSES-Programming-HOWTO/}
+
+\end{thebibliography}
+
+\end{document}

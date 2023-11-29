@@ -1,0 +1,44 @@
+.TH DHCP_STATS 1 "November 2023" "Version 1.0" "DHCP Packet Analyzer Manual"
+
+.SH NAME
+dhcp_stats \- Analyze DHCP packets and report on IP address allocation.
+
+.SH SYNOPSIS
+.B dhcp-stats [-r <filename>] [-i <interface-name>] <ip-prefix> [ <ip-prefix> [ ... ] ]
+
+.SH DESCRIPTION
+\fBdhcp_stats\fR is a program designed to analyze DHCP packets within a network. It provides insights into the allocation of IP addresses within a specified address prefix.
+
+.SH OPTIONS
+.TP
+\fB\-i \fIinterface\fR
+Specify the network interface for packet capture.
+
+.TP
+\fB\-r \fIinterface\fR
+Specify the PCAP file for offline packet analysis.
+
+.TP
+\fB\<ip-prefix>\fR
+Specify the address prefix to analyze.
+
+.SH EXAMPLES
+Analyzing DHCP packets on the eth0 interface within the 192.168.1.0/24 address prefix:
+.PP
+.B dhcp-stats -i eth0 192.168.1.0/24
+
+Analyzing DHCP packets from the DHCPcopy.cap file within the 10.0.0.0/16 address prefix:
+.PP
+.B dhcp-stats -r DHCPcopy.cap 10.0.0.0/16
+
+.SH SEE ALSO
+The program is based on the Dynamic Host Configuration Protocol (DHCP) specifications. Refer to RFC 2131 for more information.
+
+.SH AUTHOR
+Written by Adrian Horvath <xhorva14>
+
+.SH REPORTING BUGS
+Report bugs to <xhorva14@vutbr.cz>
+
+.SH DISCLAIMER
+This manual page is provided "as is" without any warranty.
