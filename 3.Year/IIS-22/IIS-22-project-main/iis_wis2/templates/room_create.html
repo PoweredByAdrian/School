@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+    Register Page
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+            <br>
+            {{ form.name.label() }}
+            {{ form.name(class="form-control", placeholder="Název") }}
+            {{ form.capacity.label() }}
+            {{ form.capacity(class="form-control", placeholder="Kapacita") }}
+            <br>
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+        </form>
+    </div>
+</body>
+{% endblock %}
