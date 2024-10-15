@@ -1,0 +1,11 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "name": "ipp-core",
+            "path": "interpret/ipp-core"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port).
+Warning: DOMDocument::loadXML(): error parsing attribute name in Entity, line: 3 in /ipp-php/core/FileSourceReader.php on line 36
+Warning: DOMDocument::loadXML(): attributes construct error in Entity, line: 3 in /ipp-php/core/FileSourceReader.php on line 36
+Warning: DOMDocument::loadXML(): Couldn't find end of Start Tag program line 2 in Entity, line: 3 in /ipp-php/core/FileSourceReader.php on line 36
+Warning: DOMDocument::loadXML(): Extra content at the end of the document in Entity, line: 3 in /ipp-php/core/FileSourceReader.php on line 36
+Exception: Invalid source XML format

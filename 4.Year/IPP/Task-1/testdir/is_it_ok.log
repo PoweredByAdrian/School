@@ -1,0 +1,26 @@
+Archive:  xhorva14.zip
+  inflating: parse.py                
+ extracting: rozsireni               
+  inflating: readme1.md              
+IPP Projekt 2024
+        Author: Adrian Horvath (xhorva14)
+        Usage: python3 parse.py [OPTIONS] < input_file.ippcode24
+
+This filter script (parse.py in Python 3.10) reads IPPcode24 source code from standard input, checks for lexical and syntactic correctness, and outputs the XML representation of the program to standard output as per the specification.
+
+Options:
+  --stats=FILENAME        Specify an output file for statistics. Can be used multiple times.
+                         Valid stats flags: --loc, --comments, --jumps, --labels,
+                         --fwjumps, --backjumps, --badjumps, --eol, --frequent, --print=STRING
+  --help                  Show this help message and exit.
+
+Common Exit Codes:
+  10 - Script parameters error or use of a forbidden combination of parameters.
+  12 - Error opening output files for writing.
+
+IPPcode24 Source Code Analysis Exit Codes:
+  21 - Incorrect or missing header in the source code.
+  22 - Unknown or incorrect operation code in the source code.
+  23 - Other lexical or syntactic error in the source code.
+
+        

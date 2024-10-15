@@ -1,0 +1,426 @@
+@startuml
+class DataTypes {
+}
+
+class Frames {
+}
+
+class OperandsTypes {
+}
+
+class FrameException {
++ __construct()
+}
+
+class OperandTypeException {
++ __construct()
+}
+
+class OperandValueException {
++ __construct()
+}
+
+class SemanticException {
++ __construct()
+}
+
+class StringOperationException {
++ __construct()
+}
+
+class ValueException {
++ __construct()
+}
+
+class VariableAccessException {
++ __construct()
+}
+
+class XMLStructException {
++ __construct()
+}
+
+class Add {
++ compute()
+}
+
+class Adds {
++ compute()
+}
+
+class AndClass {
+# <u>allowedTypes
++ compare()
+}
+
+class Ands {
++ <u>allowedTypes
++ compare()
+}
+
+class BreakClass {
++ execute()
+}
+
+class Call {
++ execute()
+}
+
+class Clears {
++ execute()
+}
+
+class ComparableInstruction {
+# <u>expectedArgs
+# <u>allowedTypes
++ <u>getExpectedArgs()
++ compare()
++ execute()
+}
+
+class Concat {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Createframe {
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Defvar {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class DPrint {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Eq {
+# <u>allowedTypes
++ compare()
+}
+
+class Eqs {
++ <u>allowedTypes
++ compare()
+}
+
+class ExitClass {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Getchar {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Gt {
++ compare()
+}
+
+class Gts {
++ compare()
+}
+
+class IDiv {
++ compute()
+}
+
+class IDivs {
++ compute()
+}
+
+class InstructionBase {
+# <u>expectedArgs
++ opcode
++ args
++ <u>getExpectedArgs()
++ __construct()
++ execute()
+}
+
+class Int2Char {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Int2Chars {
++ <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Jump {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Jumpifeq {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Jumpifeqs {
++ <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Jumpifneq {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Jumpifneqs {
++ <u>expected_args
++ <u>getExpectedArgs()
++ execute()
+}
+
+class LabelClass {
+# <u>expectedArgs
+- name
++ <u>getExpectedArgs()
++ __construct()
++ execute()
++ getName()
+}
+
+class Lt {
++ compare()
+}
+
+class Lts {
++ compare()
+}
+
+class MathInstructionBase {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ compute()
++ execute()
+}
+
+class Move {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Mul {
++ compute()
+}
+
+class Muls {
++ compute()
+}
+
+class Not {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Nots {
++ <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class OrClass {
+# <u>allowedTypes
++ compare()
+}
+
+class Ors {
++ <u>allowedTypes
++ compare()
+}
+
+class Popframe {
++ execute()
+}
+
+class PopS {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Pushframe {
++ execute()
+}
+
+class PushS {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Read {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class ReturnClass {
++ execute()
+}
+
+class Setchar {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class StackComparableInstruction {
+# <u>expectedArgs
+# <u>allowedTypes
++ <u>getExpectedArgs()
++ compare()
++ execute()
+}
+
+class StackMathInstructionBase {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ compute()
++ execute()
+}
+
+class Stri2Int {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Stri2Ints {
++ <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Strlen {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Sub {
++ compute()
+}
+
+class Subs {
++ compute()
+}
+
+class TypeClass {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class Write {
+# <u>expectedArgs
++ <u>getExpectedArgs()
++ execute()
+}
+
+class InstructionsParser {
+- <u>OPCODE_COLLECTION
+- <u>parseInstruction()
+- <u>isValidArgType()
+- <u>parseArguments()
+- <u>parseOneArgument()
+- <u>scopeValidate()
++ <u>parseDOMDocument()
++ <u>variableValidate()
++ <u>string_fix()
+}
+
+class Interpreter {
++ execute()
+}
+
+class InstructionArgument {
++ arg_type
++ __construct()
+}
+
+class Label {
++ name
++ __construct()
++ getName()
+}
+
+class Symbol {
++ data_type
++ value
++ __construct()
++ one_of_types()
++ equal_type()
++ is_nil()
++ is_bool()
++ is_float()
++ is_string()
++ is_int()
++ equals()
++ equals_value()
+}
+
+class Type {
++ type
++ __construct()
+}
+
+class Variable {
+- frame
+- value
++ __construct()
++ getFrame()
++ getValue()
+}
+
+class Program {
++ input
++ instructionPointer
++ TF
++ LF_Stack
++ dataStack
++ callStack
++ labels
++ stderr
++ stdout
+- GF
+- exitCode
+- instructions
++ __construct()
++ run()
++ existsVar()
++ setVar()
++ getVar()
++ getSymb()
++ exit()
++ popStack()
++ getExitCode()
+}
+
+class ValidationHelper {
++ <u>valid_mathsymbol()
++ <u>valid_comparablesymbol()
+}
+
+@enduml

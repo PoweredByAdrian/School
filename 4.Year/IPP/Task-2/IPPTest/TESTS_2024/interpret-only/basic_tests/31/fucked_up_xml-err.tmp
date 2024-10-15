@@ -1,0 +1,3 @@
+Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9000 (through xdebug.client_host/xdebug.client_port).
+Warning: DOMDocument::loadXML(): Premature end of data in tag program line 2 in Entity, line: 5 in /ipp-php/core/FileSourceReader.php on line 36
+Exception: Invalid source XML format
