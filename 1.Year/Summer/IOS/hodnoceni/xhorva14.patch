@@ -1,0 +1,18 @@
+--- tradelog.odevzdany	2021-04-26 16:36:37.769711500 +0200
++++ tradelog	2021-04-26 16:36:58.541814200 +0200
+@@ -66,13 +66,13 @@
+     AFTER_DATE="$2 $3"
+     shift
+     shift
+-    shift
++
+     ;;
+   "-b")
+     BEFORE_DATE="$2 $3"
+     shift
+     shift
+-    shift
++
+     ;;
+   "-t")
+     TICKER_FILTER="$2|$TICKER_FILTER"

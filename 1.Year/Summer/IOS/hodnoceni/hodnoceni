@@ -1,0 +1,108 @@
+13:celkem bodu za projekt
+#-- rucni uprava hodnoceni ----------------------------
+-1:patch
+#-- automaticke hodnoceni -----------------------------
+1:ok: opis vstupniho souboru na vystup
+1:ok: opis vice vstupnich souboru na vystup
+1:ok: opis vice vstupnich souboru vcetne gz na vystup
+1:ok: opis stdin na stdout
+0:cmd-graph-pos: prikaz graph-pos
+# ./tradelog graph-pos test.log <stdin >>stdout 2>>stderr; echo $? >>errcode
+# diff -u stdout.ref stdout
+#   --- stdout.ref
+#   +++ stdout
+#   @@ -1,9 +1,9 @@
+#   -AAPL      : ####
+#   -ASML      : !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#   -BHP       : !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#   -CVX       : ########
+#   -DIS       : ################
+#   -MSFT      : !!!!!
+#   -PFE       : !
+#   -TM        : !!!!!!!!!
+#   -WMT       : !!!!!!!!
+#   +AAPL      :
+#   +ASML      :
+#   +BHP       :
+#   +CVX       :
+#   +DIS       :
+#   +MSFT      :
+#   +PFE       :
+#   +TM        :
+#   +WMT       :
+# diff -u stderr.ref stderr
+# Vypis byl zkracen, cely text viz cmd-graph-pos/hodnoceni-auto
+0:cmd-hist-ord: prikaz hist-ord
+# ./tradelog hist-ord test.log <stdin >>stdout 2>>stderr; echo $? >>errcode
+# diff -u stdout.ref stdout
+#   --- stdout.ref
+#   +++ stdout
+#   @@ -43,7 +43,7 @@
+#    TSLA      : #######
+#    TSM       : ########
+#    UNH       : ####
+#   -V         : ######
+#   +V         : ############
+#    VZ        : #########
+#    WMT       : ######
+#    XOM       : #########
+0:cmd-last-price: prikaz last-price
+# ./tradelog last-price test.log <stdin >>stdout 2>>stderr; echo $? >>errcode
+# diff -u stdout.ref stdout
+#   --- stdout.ref
+#   +++ stdout
+#   @@ -6,6 +6,7 @@
+#    AMZN      : 3239.24
+#    ASML      :  533.94
+#    AVGO      :  503.88
+#   +AVGO      :  503.88
+#    BABA      :  258.98
+#    BAC       :   34.58
+#    BHP       :   74.83
+#   @@ -43,7 +44,6 @@
+#    TSLA      :  704.22
+#    TSM       :  133.54
+#    UNH       :  301.76
+#   -V         :  223.17
+#    VZ        :   55.29
+#    WMT       :  126.31
+#    XOM       :   57.99
+1:ok: prikaz list-tick
+0:cmd-pos: prikaz pos
+# ./tradelog pos test.log <stdin >>stdout 2>>stderr; echo $? >>errcode
+# diff -u stdout.ref stdout
+#   --- stdout.ref
+#   +++ stdout
+#   @@ -1,16 +1,14 @@
+#    SHOP      :  15884926.56
+#    NVDA      :   9951675.78
+#   -FB        :   7353596.97
+#    BABA      :   5108380.50
+#   -CRM       :   4768527.88
+#    DIS       :   4305795.26
+#   -V         :   4236659.28
+#    UNH       :   3284959.36
+#    PDD       :   3214216.80
+#    ACN       :   2675684.86
+#    TM        :   1917188.26
+#    PYPL      :   1639248.50
+#    LLY       :   1409758.80
+#   +V         :   1244491.35
+#    ORCL      :   1084615.56
+#    NKE       :   1016613.95
+#    CSCO      :    999423.75
+#   @@ -20,6 +18,12 @@
+#    MRK       :    370076.49
+# Vypis byl zkracen, cely text viz cmd-pos/hodnoceni-auto
+1:ok: prikaz profit
+1:ok: filtr -a
+1:ok: filtry -a i -b
+1:ok: filtr -b
+1:ok: filtr -t
+1:ok: filtr -t -t
+1:ok: filtr -t pos
+1:ok: filtr -t profit
+1:ok: docasne soubory:
+#------------------------------------------------------
+13:celkove score (max pro hodnoceni 15)
+13:celkem bodu za projekt

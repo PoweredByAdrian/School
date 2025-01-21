@@ -1,0 +1,457 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    font-size: 1vw;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+h1, h2, p, a, li{
+    color: white;
+}
+header{
+    z-index: 2;
+    background-color:rgb(255, 102, 0);;
+}
+.delimiter{     /*nastavenie delimitrov aby oddelovali sekcie pri pouziti float*/
+    clear: both;
+    width: 100%;
+    height: 0;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+#menu{
+    background-color: rgb(255, 102, 0);
+}
+#nav-bar{
+    color: white;
+}
+#menu a{
+    color: white;
+}
+
+button{
+    border: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+ section{ /*nastavenie okraju sekcii*/
+    max-width: 1300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+li{
+    font-size: 2rem;
+}
+
+header nav ul{
+    overflow: hidden;
+}
+
+header nav li{
+    font-size: 2rem;
+}
+#logo{
+    position:relative;
+}
+#mainlogo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    font-size: 5rem;
+}
+h2{
+    text-align: center;
+}
+p{
+    font-size: 1.4rem;
+    text-align: center;
+}
+#menu{
+    margin: 0;
+    position:relative;
+    display: none;
+}
+#menu ul{
+    margin: auto;
+    max-width: 1300px;
+}
+#menu ul li{
+    text-align: center;
+}
+#nav-bar{       /*zarovnanie nav bar tlacidla na stred*/
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 20px;
+
+    font-size: 4rem;
+    float: right;
+}
+#nav-bar2{
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-size: 4rem;
+    float: right;
+}
+.sticky{
+    left: 50%;
+    transform: translate(-50%);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+:target { /*odsadenie sekcii pri pouziti odkazov v menu*/
+    display: block;
+    position: relative;
+    top: -92px; 
+    visibility: hidden;
+}
+ul{
+    padding-left: 0;
+    padding-right: 0;
+}
+#menu a{
+    display:inline-block;
+    width: 100%;
+}
+#clas ul{
+    overflow: hidden;
+}
+#clas .class-slider{
+    width: 30rem;
+    max-width: calc(1300px / 4); /*velkost jedneho obrazka*/
+    cursor: pointer;
+    background-color: rgb(83, 82, 82);
+    align-content: center;
+    padding-left: 0.5rem;
+    float: left;
+}
+#clas ul{
+    display: flex;
+    justify-content: center;
+}
+.button-cont{
+    display: inline-flex;
+    align-items: center;
+}
+#clas ul .clas-button{
+
+    
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-size:  3rem;
+    float: left;
+}
+#clas li img{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5rem;
+
+}
+#clas .img-class{
+    width: 100%;
+
+}
+
+#clas li p{
+    color: rgb(255, 102, 0);
+    font-size: 3rem;
+    margin: 0;
+}
+
+#spec li .img-container{
+    height: 100%;
+    width: 100%;
+}
+#spec li img{
+    width: 100%;
+}
+#spec .spec-slide{
+    float: left;
+    background-color: rgb(37, 36, 36);
+    overflow: hidden;
+    width: calc(100% - 120px);/*nastavenie sirky aby sa zmestili aj tlacidla*/
+}
+#spec li .container{
+    width: 50%;
+    position: relative;
+    height: 100%;
+}
+#spec li h3{ /*napozicovanie textu*/
+    background-color: black;
+    margin: 0;
+    position: absolute;
+    bottom: 8px;
+    left: 1px;
+    color: white;
+}
+#spec li div{
+    float: left;
+}
+#spec li p{
+    float: right;
+
+    width: 50%;
+    font-size: 1.2rem;
+    color: white;
+}
+#spec button{
+
+    cursor: pointer;
+    vertical-align: middle;
+    background-color: black;
+    color: white;
+    font-size:  40px;
+    float: left;
+    width: 40px;
+}
+#spec ul{
+    display: flex;
+    overflow: hidden;
+}
+#pvpp nav{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#pvpp nav button {
+
+    float: left;
+}
+#pvpp nav div{
+    position: relative;
+}
+#pvpp nav div p{
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    bottom: 10px;
+    font-size: 1.3rem;
+    color: white;
+}
+#pvpp nav button{
+    cursor: pointer;
+
+    vertical-align: middle;
+    background-color: black;
+    color: white;
+    font-size:  3rem;
+    float: left;
+}
+.popup{ /*nastavenie parametrov pre vyskakovacie okna*/
+    transition: 300ms ease-in-out;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 10;
+    background-color: rgb(37, 36, 36);
+    max-width: 60%;
+    border: gray solid;
+    border-radius: 10px;
+}
+.popup-header{
+
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: gray solid;
+}
+.popup .popup-text{
+    font-size: 1.3rem;
+    color: white;
+}
+.popup-header .title{
+    font-size: 2rem;
+    color: rgb(255, 102, 0);
+}
+.popup .close{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: red;
+}
+.popup-text{
+    padding: 10px 10px;
+}
+#background{ /*nastavenie parametrov pre pozadie pri aktivnom popup okne*/
+    transition: 300ms ease-in-out;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(145, 143, 143, 0.685);
+    pointer-events: none;
+}
+
+#background.active{
+    pointer-events: all;
+    opacity: 1;
+}
+.popup.active{/*zarovnanie popup okna na stred*/
+    transform: translate(-50%, -50%) scale(1);
+}
+.dis-none{
+    display: none;
+}
+.dis-block{
+    display: block;
+}
+#menulogo{
+    display: none;
+}
+#logo{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+#menu{
+    padding-right: 20px;
+    padding-left: 20px; 
+}
+h2{
+    font-size: 3rem;
+    font-family: monospace;
+}
+#menu li a{
+
+    letter-spacing: 2px;
+    font-family: copperplate, fantasy;
+}
+footer{
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(255, 102, 0);
+}
+footer p{
+    font-family: initial;
+    font-size: 1.2rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    max-width: 1300px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 999px) { /*dodatocne upravy verzie pre mensie displeje*/
+    #pvpp .pvp-slide img{
+        width: 40vw;
+    }   
+}
+#clas nav li p{
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+p{
+    font-family: Arial, sans-serif;
+    font-size: 1.4rem;
+}
+.title{
+    font-weight: bold;
+    font-family: sans-serif;
+}
+@media screen and (min-width: 1000px){/*verzia pre vacsie displeje*/
+
+    #nav-bar{
+        display: none;
+    }
+    #menu{
+        display: block;
+    }
+    #menu ul{/*nastavenie pozicie menu pri vacsom monitore*/
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    #logo{
+        display: none;
+    }
+
+
+    #clas ul .button-cont{
+        display: none;
+    }
+    #clas .class-slider{
+        border: 2px white solid;
+    }
+
+    #pvpp nav .slide-button{
+        display: none;
+    }
+    #pvpp nav button{
+        width: 100%;
+    }
+    #pvpp nav{
+        display: flex;
+        flex-flow: wrap;
+    }
+    #pvpp nav div{
+        width: 20%;
+    }
+    #pvpp nav img{
+        width: 100%;
+    }
+    #pvpp button{
+        border: 1px white solid;
+    }
+    .dis-none{
+        display: block;
+    }
+    #menulogo{/*nastavenie loga stranky namiesto headeru*/
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 5rem;
+        border-bottom: black 2px solid;
+        background-color: rgb(255, 102, 0);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #mainlogo{
+        display: none;
+    }
+
+}
+
+

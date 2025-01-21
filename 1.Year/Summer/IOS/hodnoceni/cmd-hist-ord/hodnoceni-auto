@@ -1,0 +1,14 @@
+0:cmd-hist-ord: prikaz hist-ord
+# ./tradelog hist-ord test.log <stdin >>stdout 2>>stderr; echo $? >>errcode
+# diff -u stdout.ref stdout
+#   --- stdout.ref
+#   +++ stdout
+#   @@ -43,7 +43,7 @@
+#    TSLA      : #######
+#    TSM       : ########
+#    UNH       : ####
+#   -V         : ######
+#   +V         : ############
+#    VZ        : #########
+#    WMT       : ######
+#    XOM       : #########

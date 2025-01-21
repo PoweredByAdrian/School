@@ -1,0 +1,53 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'14'
+-sourcepath
+'C:/Users/matus/Projekty/ija/IJA-Projekt/IJA-Task-2/IJA-Projekt/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/matus/Projekty/ija/IJA-Projekt/IJA-Task-2/IJA-Projekt/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Pacman 1.0 API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/14/docs/api' 'C:/Users/matus/Projekty/ija/IJA-Projekt/IJA-Task-2/IJA-Projekt/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Pacman 1.0 API'
+Game.Entities
+Game.Fields
+Game
+Game.MazeBoard
+Game.MazeObjects
+Interfaces
+PacmanGUI
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\src\main\java = 1682536909161
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\allclasses-index.html = 1683492540532
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\allpackages-index.html = 1683492540536
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\element-list = 1683492540264
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\help-doc.html = 1683492540577
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\index-all.html = 1683492540567
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\index.html = 1683492540513
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\javadoc.bat = 1683492423134
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\jquery-ui.overrides.css = 1683492540605
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\member-search-index.js = 1683492540547
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\module-search-index.js = 1683492540537
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\overview-summary.html = 1683492540571
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\overview-tree.html = 1683492540509
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\package-search-index.js = 1683492540541
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\script.js = 1683492540582
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\search.js = 1683492540585
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\serialized-form.html = 1683492540363
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\stylesheet.css = 1683492540580
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\tag-search-index.js = 1683492540549
+C:\Users\matus\Projekty\ija\IJA-Projekt\IJA-Task-2\IJA-Projekt\target\site\apidocs\type-search-index.js = 1683492540543

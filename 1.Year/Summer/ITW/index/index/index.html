@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+		<meta charset="utf-8">
+		<title>WARFACE</title>
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400%7CMontserrat:400,700" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">  
+		<link rel="stylesheet" href="projekt.css">
+    </head>
+    <body>
+        <a id="menulogo" href="http://www.stud.fit.vutbr.cz/~xhorva14/projekt2/index.html">WARFACE</a> <!--menu pri sirke vacsej ako 1000px-->
+        <header id="header">
+            <div id="logo">
+                <a id="mainlogo" href="http://www.stud.fit.vutbr.cz/~xhorva14/projekt2/index.html">WARFACE</a>
+                <a id="nav-bar" href="javascript:void(0);" ><i class="fas fa-bars"></i></a>
+            </div>
+            
+            <nav id="menu">
+                <ul>
+                    
+                    <li><a href=""><i class="fas fa-arrow-up"></i></a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#classes">CLASSES</a></li>
+                    <li><a href="#pve">PVE</a></li>
+                    <li><a href="#pvp">PVP</a></li>
+                    
+                </ul>
+            </nav>
+            
+        </header>
+
+        <div class="delimiter" id="header-delim"></div> <!--oddelovac na odsadenie prvej sekcie pri sticky menu-->
+        <div class="delimiter" id="about"></div> <!--oddelovace sekcii aby sa text neprelieval pri pouziti float-->
+
+        <section >
+            <h2>ABOUT</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis doloribus est eius quae aut asperiores quas rerum, voluptas placeat natus. Ipsum velit aut sint cupiditate laborum ipsa debitis doloribus numquam excepturi quisquam, eum deserunt? Est vero praesentium mollitia tempora nemo deserunt. Ratione, doloremque laudantium repellendus tenetur fugiat soluta voluptatibus voluptas ipsum perferendis illo minus repellat nulla eveniet dignissimos alias facere. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque quae, dolores blanditiis aperiam saepe consequatur fugit ut repellendus quia nemo, ad expedita vero aliquam corrupti, doloremque cupiditate id explicabo ipsa!</p>
+        </section>
+
+        <div class="delimiter" id="classes"></div>
+
+        <section id="clas">
+            <h2>CLASSES</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga cupiditate esse quis explicabo ex consectetur. Architecto doloribus, quam, eligendi voluptatem pariatur veritatis, ab earum numquam dolor soluta modi ratione. Sed? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, debitis laboriosam. Aspernatur pariatur numquam assumenda.</p>
+            <nav>
+                <ul>
+                    <li class="button-cont"><button class="fas fa-chevron-left clas-button" onclick="funcDivs(-1)"></button></li>
+                    <li data-target="#rifl" class="class-slider"><p>RIFLEMAN</p><img src="rifleman.png" alt="RIFLEMAN"><img class="img-class" src="class-rifleman.png" alt="RIFLEMAN"></li>
+                    <li data-target="#eng" class="class-slider"><p>ENGINEER</p><img src="enginer.png" alt="ENGINEER"><img class="img-class" src="class-engineer.png" alt="ENGINEER"></li>
+                    <li data-target="#med" class="class-slider"><p>MEDIC</p><img src="medic.png" alt="MEDIC"><img class="img-class" src="class-medic.png" alt="MEDIC"></li>
+                    <li data-target="#sed" class="class-slider"><p>SED</p><img src="sed.png" alt="SED"><img class="img-class" src="class-sed.png" alt="SED"></li>
+                    <li class="button-cont"><button class="fas fa-chevron-right clas-button" onclick="funcDivs(1)"></button></li>
+                </ul>
+            </nav>
+            <div id="class-about"> <!--container s popup oknam-->
+                <div class="popup" id="rifl"> <!--jednotlive popup okna-->
+                    <div class="popup-header"><!--header obsahujuci nadpis a tlacidlo na zavretie-->
+                         <div class="title">RIFLEMAN</div>
+                         <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam id, mollitia facilis, aliquid ea at quis similique, fuga et animi laborum itaque excepturi? Nulla porro, molestias perferendis quae itaque magnam?</div>
+                </div>
+
+                <div class="popup" id="eng">
+                    <div class="popup-header">
+                         <div class="title">ENGINEER</div>
+                         <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, repellendus vero dolorem voluptas doloribus harum? Placeat quas odit magnam atque asperiores, vitae ipsam reprehenderit voluptatum corporis optio aperiam numquam est.</div>
+                </div>
+
+                <div class="popup" id="med">
+                    <div class="popup-header">
+                         <div class="title">MEDIC</div>
+                         <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis eligendi dolorum deleniti aliquam dolores laudantium laboriosam dicta atque, consequatur expedita nulla, cum nam ratione alias dolor animi adipisci nostrum numquam.</div>
+                </div>
+
+                <div class="popup" id="sed">
+                    <div class="popup-header">
+                         <div class="title">SED</div>
+                         <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptas debitis, reiciendis ad autem accusantium quas facere voluptatum reprehenderit. Sit explicabo beatae saepe iusto soluta, totam consectetur quo quae iste!</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="delimiter" id="pve"></div>
+
+        <section id="spec">
+            <h2>PVE</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur rerum nisi ipsum labore tempora voluptatum in doloremque nobis dicta facilis. Nihil labore et suscipit ipsa. Laboriosam obcaecati dolorem cumque esse nesciunt officia ullam iure incidunt. Molestias assumenda atque expedita quae harum iusto asperiores laudantium nesciunt, sapiente modi deleniti doloremque mollitia?</p>
+            
+            <ul>
+                <li class="button-cont"><button class="fas fa-chevron-left" onclick="plusDivs(-1)"></button></li><!--tlacidlo na posuvanie obsahu-->
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="heist.jpg" alt="HEIST"></div><h3>HEIST</h3></div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad recusandae soluta dignissimos nulla voluptate quasi ea expedita voluptatem possimus itaque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus voluptatibus quasi quisquam ea eveniet at. Animi eos nam asperiores aperiam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eos vel praesentium, itaque consequatur distinctio nisi! Quaerat incidunt in dolorum.</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="swarm.jpg" alt="SWARM"></div><h3>SWARM</h3></div><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate illo beatae adipisci voluptas ut aspernatur eum perferendis ex iure eius, consequatur atque culpa iusto repellat similique laboriosam, at deleniti optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque a eligendi optio laboriosam adipisci, delectus distinctio recusandae obcaecati animi exercitationem? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente optio laudantium quos ad rem, assumenda placeat quisquam vel. Animi, reprehenderit.</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="blackwood.jpg" alt="BLACKWOOD"></div><h3>BLACKWOOD</h3></div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sunt libero sint! Hic quia quis nostrum laudantium voluptatum laborum ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit pariatur exercitationem neque repellat id, libero accusamus animi recusandae assumenda dolore.</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="hydra.jpg" alt="HYDRA"></div><h3>HYDRA</h3></div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corporis architecto repudiandae impedit cumque sint porro necessitatibus! Autem, eum maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Non explicabo molestiae odio dolorum iusto libero rerum atque impedit rem obcaecati. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus in cum neque? Impedit eum aperiam ipsam porro beatae culpa ipsum?</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="mars.jpg" alt="MARS"></div><h3>MARS</h3></div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic temporibus tenetur ea! Illum aliquid reprehenderit voluptate, ipsa blanditiis ea beatae et explicabo expedita hic vel dignissimos recusandae nemo eos dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cumque recusandae inventore vitae corrupti sequi mollitia vel a pariatur illum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, dignissimos quia rem quo nostrum esse laborum ipsa vitae placeat officia.</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="sunrise.jpg" alt="SUNRISE"></div><h3>SUNRISE</h3></div><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque aspernatur quia est et incidunt nisi odit molestiae illum, sint sed iusto nesciunt quibusdam mollitia quae, nam corrupti. Ipsam in, error nesciunt dicta sequi necessitatibus quasi cum magni quod, accusantium quia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatem fuga alias hic expedita! Velit iusto praesentium est eaque quam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor illo magnam odit modi aut cupiditate repellat dolorum architecto harum maiores.</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="pripyat.jpg" alt="PRIPYAT"></div><h3>PRIPYAT</h3></div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, neque consequuntur facere maxime omnis ab aliquid nemo tempore modi temporibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem iusto totam optio hic iure quia repudiandae voluptatibus animi tempore sunt? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda dignissimos velit dolorum doloribus numquam ipsum eligendi, qui omnis nemo totam.</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="icebreaker.jpg" alt="ICEBREAKER"></div><h3>ICEBREAKER</h3></div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, hic. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur magnam voluptate quod, laudantium cumque libero explicabo sed porro neque nesciunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nisi distinctio eligendi beatae vel nemo vitae cumque id dignissimos omnis.</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="blackshark.jpg" alt="BLACKSHARK"></div><h3>BLACK SHARK</h3></div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt voluptate expedita dicta temporibus eum magni, omnis hic voluptatem, commodi exercitationem facere mollitia ab officia veniam? Ratione deleniti ipsa inventore dolorem! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum error voluptates blanditiis minus sunt praesentium tenetur maiores, expedita similique natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ullam similique quibusdam ducimus quos. Doloribus consequatur rem ducimus reprehenderit repudiandae.</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="blackout.jfif" alt="BLACKOUT"></div><h3>BLACKOUT</h3></div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, soluta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum amet beatae cupiditate doloribus aspernatur, magni et laborum recusandae ex repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta optio magnam sit quod praesentium vero eveniet vel porro sunt voluptatum.</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="anubis.jpg" alt="ANUBIS"></div><h3>ANUBIS</h3></div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quisquam aliquid corrupti. In reiciendis tempora consequatur dolore cumque eligendi culpa? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vitae magnam perferendis magni dolores eum corporis harum, dicta fuga sint. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quos, ipsam rem commodi consectetur at sint nostrum? Voluptatum, quidem neque.</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="cyberhorde.jfif" alt="CYBER HORDE"></div><h3>CYBER HORDE</h3></div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae quia illum explicabo iste, nesciunt minus odit enim autem ab! Molestiae veniam doloribus unde ea nam enim vitae numquam! Omnis, tenetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nemo placeat numquam voluptate magnam debitis harum, enim asperiores maxime quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus provident excepturi accusamus similique error, nulla tempore praesentium eum ipsam omnis.</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="earthshaker.jpg" alt="EART SHAKER"></div><h3>EARTH SHAKER</h3></div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, nulla. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut sequi iste fugiat beatae hic sapiente nostrum quod id rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, molestiae. Praesentium velit molestias dolorem consectetur asperiores voluptas! Ea, libero est.</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="coldpeak.jpg" alt="COLD PEAK"></div><h3>COLD PEAK</h3></div><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet rerum minima dolore architecto eius debitis voluptatibus tempore non maiores consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos facilis asperiores fugiat necessitatibus? Impedit sapiente odit asperiores dicta molestias tempora? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem debitis molestias quo rem sunt excepturi expedita dolorum at ad facilis?</p></li>
+                <li class="spec-slide"><div class="container"><div class="img-container"><img src="hq.jpg" alt="THE HQ"></div><h3>THE HQ</h3></div><p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis cum et placeat quae sunt, optio error ea. Debitis, placeat neque? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio at minima unde praesentium earum molestiae rerum atque, veritatis minus possimus?</p></li> 
+                <li class="button-cont"><button class="fas fa-chevron-right" onclick="plusDivs(1)"></button></li><!--tlacidlo na posuvanie obsahu-->
+            </ul>
+            
+        </section>
+
+        <div class="delimiter" id="pvp"></div>
+
+        <section id="pvpp">
+            <h2>PVP</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia beatae at ipsam. Repudiandae consequatur non alias a doloremque. Neque, eos. Eius qui suscipit nemo officia, aut adipisci sed iste omnis facilis. Iusto incidunt explicabo molestias dolorem quam aliquam reprehenderit atque consequatur natus nam, nemo dolores. Consectetur tempore neque id quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, blanditiis nihil. Sunt, animi similique reiciendis, est odio adipisci, beatae quo ipsa rerum mollitia sed suscipit nemo porro sint quod tempore.</p>
+            <nav> 
+                    <button class="slide-button fas fa-chevron-left" onclick="minusDivs(-1)"></button>
+                    <div class="pvp-slide"><button data-target="#ptb" ><img src="PTB.jpg" alt="PTB"></button><p>PLANT THE BOMB</p></div>
+                    <div class="pvp-slide"><button data-target="#blitz" ><img src="BLITZ.jpg" alt="BLITZ"></button><p>BLITZ</p></div>
+                    <div class="pvp-slide"><button data-target="#tdm" ><img src="TDM.jpg" alt="TDM"></button><p>TEAM DEATHMATCH</p></div>
+                    <div class="pvp-slide"><button data-target="#ffa" ><img src="FFA.jpg" alt="FFA"></button><p>FREE FOR ALL</p></div>
+                    <div class="pvp-slide"><button data-target="#br" ><img src="BR.jpg" alt="BR"></button><p>BATTLE ROYALE</p></div>
+                    <div class="pvp-slide"><button data-target="#capture" ><img src="CAPTURE.jpg" alt="CPT"></button><p>CAPTURE</p></div>
+                    <div class="pvp-slide"><button data-target="#bat" ><img src="BAT.jpg" alt="BAT"></button><p>BAG AND TAG</p></div>
+                    <div class="pvp-slide"><button data-target="#destruction" ><img src="DESTRUCTION.jpg" alt="DEST"></button><p>DESTRUCTION</p></div>
+                    <div class="pvp-slide"><button data-target="#domination" ><img src="DOMINATION.jpg" alt="DMN"></button><p>DOMINATION</p></div>
+                    <div class="pvp-slide"><button data-target="#storm" ><img src="STORM.jpg" alt="STORM"></button><p>STORM</p></div>
+                    <button class="slide-button fas fa-chevron-right" onclick="minusDivs(1)"></button>
+            </nav>
+
+            <div class="pvp-about"> <!--container s popup oknam-->
+
+                <div class="popup" id="ptb"> <!--jednotlive popup okna-->
+                    <div class="popup-header"> <!--header obsahujuci nadpis a tlacidlo na zavretie-->
+                         <div class="title">PLANT THE BOMB</div>
+                         <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quia recusandae possimus cumque itaque qui excepturi aliquid quidem! Excepturi consequuntur facilis qui molestias porro asperiores a architecto culpa quaerat necessitatibus nihil atque eveniet maxime recusandae error accusantium iste earum dolore reiciendis aspernatur iure, suscipit ad. Recusandae, consequatur fugit! Doloremque, possimus?</div>
+                </div>
+                <div class="popup" id="blitz">
+                    <div class="popup-header">
+                        <div class="title">BLITZ</div>
+                         <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere iusto rerum sed temporibus expedita. Ab architecto doloremque tenetur iusto, quidem quo? Cumque in beatae, nulla ipsa ipsam magni facilis aperiam? Debitis accusamus minus magnam enim, tenetur maiores quam sit quisquam sequi sed dolor error laboriosam perspiciatis nisi. Ducimus, repellendus adipisci.</div>
+                </div>
+                <div class="popup" id="tdm">
+                    <div class="popup-header">
+                        <div class="title">TEAM DEATHMATCH</div>
+                        <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque deleniti exercitationem, odio nam ratione ad iste nobis neque ducimus officia nihil, laudantium cum ea provident? Voluptatem quisquam est dicta corporis ducimus natus reiciendis quos? Dolore corporis qui dolorem eligendi molestias, velit perferendis, fugit unde harum maiores quae asperiores voluptatem omnis!</div>
+                </div>
+                <div class="popup" id="ffa">
+                    <div class="popup-header">
+                        <div class="title">FREE FOR ALL</div>
+                        <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatum maiores nesciunt dicta quis tenetur repellat sint amet dignissimos dolor deserunt, soluta similique illum repudiandae enim nisi molestiae non commodi quia incidunt facilis. Minus corrupti assumenda architecto. Nihil, ipsum molestiae eos sequi asperiores dicta cumque, nostrum culpa labore eligendi beatae.</div>
+                </div>
+                <div class="popup" id="br">
+                    <div class="popup-header">
+                        <div class="title">BATTLE ROYALE</div>
+                        <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita voluptatibus, quasi deserunt quis aut, odio quae illo atque veritatis non reprehenderit obcaecati aliquam quod iusto explicabo! Omnis aspernatur, dolore vitae consequuntur velit ex architecto eligendi dicta suscipit eum! Iste, aliquam expedita! Adipisci, voluptates accusamus! Molestias voluptates assumenda totam cumque autem.</div>
+                </div>
+                <div class="popup" id="capture">
+                    <div class="popup-header">
+                        <div class="title">CAPTURE</div>
+                        <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, cumque dolores impedit aliquam repellat nisi molestias laborum laboriosam voluptas laudantium labore id, nulla placeat a quaerat beatae architecto nostrum quibusdam nihil praesentium ex? Ipsam fuga consectetur tempora nulla, error consequuntur cum, laborum mollitia magnam similique officiis necessitatibus neque recusandae. Natus.</div>
+                </div>
+                <div class="popup" id="bat">
+                    <div class="popup-header">
+                        <div class="title">BAG AND TAG</div>
+                        <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima commodi ex quasi quidem ipsum error qui, architecto, quae blanditiis enim molestiae. Ratione provident molestias deserunt veniam libero hic fuga. Officia perspiciatis provident, voluptatibus laborum quo quisquam inventore esse obcaecati quam et quia incidunt id deleniti, illum error! Eum, asperiores pariatur.</div>
+                </div>
+                <div class="popup" id="destruction">
+                    <div class="popup-header">
+                        <div class="title">DESTRUCTION</div>
+                        <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id magni consequuntur deserunt odit ullam velit hic quibusdam illo recusandae quae eos doloremque, porro, quod voluptatibus, repellat molestias! Eius dicta deleniti esse incidunt fugiat, exercitationem nobis veritatis. Consectetur alias, porro enim similique suscipit amet, odit aliquid voluptas natus pariatur ipsa beatae!</div>
+                </div>
+                <div class="popup" id="domination">
+                    <div class="popup-header">
+                        <div class="title">DOMINATION</div>
+                        <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur soluta atque inventore, ex animi, saepe sunt corrupti delectus voluptatem quo dicta dolores nemo laboriosam, id natus rem omnis exercitationem obcaecati a. Dicta nisi, itaque atque vitae consectetur quia magni quisquam odio optio quas, aperiam ipsam voluptatum fugit eaque laudantium voluptatem.</div>
+                </div>
+                <div class="popup" id="storm">
+                    <div class="popup-header">
+                        <div class="title">STORM</div>
+                        <button data-close class="close">&times;</button>
+                    </div>
+                    <div class="popup-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio praesentium consequuntur nihil sed magnam quia impedit nesciunt blanditiis natus. Impedit quis blanditiis, nemo ipsum ducimus tempore ut quisquam. Voluptas voluptatum optio corrupti enim accusantium delectus dolorem laboriosam ullam, provident modi eaque iusto! Placeat inventore odit mollitia provident iste a rerum?</div>
+                </div>
+                <div id="background"></div><!--zatmavnenie pozadia pri aktivnom popup okne-->
+            </div>
+        </section>
+        
+        <div class="delimiter"></div>
+
+        <footer>
+          <p>Stránka bola inspirovaná hrou WARFACE, ktoru najdete na stranke nizsie.<br><a href="https://pc.warface.com/en/">https://pc.warface.com/en/</a> </p>
+        </footer>
+
+    
+
+      <!--script na zachovanie menu pri scrollovani-->
+      <script> 
+        window.onscroll = function() {
+            myFunction() 
+            getHeight()
+        };
+        
+        var nav = document.getElementById("header");
+        var sticky = nav.offsetTop;
+        var x = document.getElementById("header").offsetHeight //premenna aby sa zaciatok stranky posunul o velkost menu, aby sa neprekrivali
+        
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            nav.classList.add("sticky")
+          } else {
+            nav.classList.remove("sticky");
+          }
+        }
+        function getHeight(){
+            document.getElementById("header-delim").style.height = x + 'px';
+        }     
+      </script> 
+
+      <!--burger menu script-->
+      <script>
+        window.addEventListener('click', function(e){
+            var y = document.getElementById("logo")
+            var x = document.getElementById("menu");
+    	    if (document.getElementById("nav-bar").contains(e.target) && window.matchMedia("(max-width: 1000px)").matches){
+            x.style.display = "block";
+            y.style.display = "none";
+            } else if(window.matchMedia("(max-width: 1000px)").matches){
+      	    x.style.display = "none";
+            y.style.display = "block";
+            }else{
+            x.style.display = "block";
+            y.style.display = "none";
+            }
+        })
+      </script>
+
+      <!--script na slidovanie obrazkov v sekcii CLASSES-->
+      <script>
+        var slideIndex = 1;
+        shownDivs(slideIndex);
+        
+        function funcDivs(n) {
+          shownDivs(slideIndex += n);
+        }
+        
+        function shownDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("class-slider");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].classList.add("dis-none");
+            x[i].classList.remove("dis-block"); 
+          }
+          x[slideIndex-1].classList.add("dis-block"); 
+          x[slideIndex-1].classList.add("dis-none"); 
+        }
+      </script>
+
+      <!--script na slidovanie v sekcii PVE-->
+      <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("spec-slide");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+      </script>
+
+      <!--script na slidovanie v sekcii PVP-->
+      <script>
+        var slideIndex = 1;
+        showDiv(slideIndex);
+        
+        function minusDivs(n) {
+          showDiv(slideIndex += n);
+        }
+        
+        function showDiv(n) {
+          var i;
+          var x = document.getElementsByClassName("pvp-slide");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].classList.add("dis-none");
+            x[i].classList.remove("dis-block");  
+          }
+          x[slideIndex-1].classList.add("dis-block"); 
+          x[slideIndex-1].classList.add("dis-none");  
+        }
+      </script>
+
+      <!--script na "popup okna" pri kliknuti na dany obrazok-->
+      <script>
+        const openModalButtons = document.querySelectorAll('[data-target]')
+        const closeModalButtons = document.querySelectorAll('[data-close]')
+        const overlay = document.getElementById("background")
+
+        openModalButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const modal = document.querySelector(button.dataset.target)
+            openModal(modal)
+          })
+        })
+
+        overlay.addEventListener('click', () => {
+          const modals = document.querySelectorAll('.popup.active')
+          modals.forEach(modal => {
+            closeModal(modal)
+          })
+        })
+
+        closeModalButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const modal = button.closest('.popup')
+            closeModal(modal)
+          })
+        })
+
+        function openModal(modal) {
+          if (modal == null) return
+          modal.classList.add('active')
+          overlay.classList.add('active')
+        }
+
+        function closeModal(modal) {
+          if (modal == null) return
+          modal.classList.remove('active')
+          overlay.classList.remove('active')
+        }
+      </script>
+
+      <!--script na "popup okna" pri kliknuti na dany obrazok-->
+      <script>
+
+
+
+        openModalButtons.forEach(li => {
+          li.addEventListener('click', () => {
+            const popup = document.querySelector(li.dataset.target)
+            openPopup(popup)
+          })
+        })
+
+
+        closeModalButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const popup = button.closest('.Classespopup')
+            closePopup(popup)
+          })
+        })
+
+        function openPopup(popup) {
+          if (popup == null) return
+          popup.classList.add('active')
+          overlay.classList.add('active')
+        }
+
+        function closePopup(popup) {
+          if (popup == null) return
+          popup.classList.remove('active')
+          overlay.classList.remove('active')
+        }
+        
+      </script>
+    </body>
+</html>

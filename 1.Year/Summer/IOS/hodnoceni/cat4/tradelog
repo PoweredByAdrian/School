@@ -1,0 +1,340 @@
+#!/bin/sh
+
+
+# IOS Projekt 1
+# Skript pro analýzu záznamu systému pro obchodování na burze. 
+# Skript bude filtrovat záznamy a poskytovat statistiky podle zadání úživatele.
+# Autor: Adrián Horváth login: xhorva14
+# Dátum 6.4.2021 
+
+export POSIXLY_CORRECT=yes
+export LC_NUMERIC=en_US.UTF-8
+
+Print_Help()
+{
+  echo ""
+  echo "Použití:" 
+  echo " tradelog [-h|--help]"
+  echo " tradelog [FILTR] [PŘÍKAZ] [LOG [LOG2 [...]]"
+  echo ""
+  echo "Skript filtruje záznamy z nástroje pro obchodování na burze."
+  echo ""
+  echo "PŘÍKAZ může být jeden z:"
+  echo "  list-tick                    výpis seznamu vyskytujících se burzovních symbolů, tzv. “tickerů”."
+  echo "  profit                       výpis celkového zisku z uzavřených pozic."
+  echo "  pos                          výpis hodnot aktuálně držených pozic seřazených sestupně dle hodnoty."
+  echo "  last-price                   výpis poslední známé ceny pro každý ticker."
+  echo "  hist-ord                     výpis histogramu počtu transakcí dle tickeru."
+  echo "  graph-pos                    výpis grafu hodnot držených pozic dle tickeru."
+  echo ""
+  echo "FILTR může být kombinace následujících:"
+  echo "  -a DATETIME                  after: jsou uvažovány pouze záznamy PO tomto datu (bez tohoto data). "
+  echo "  -b DATETIME                  before: jsou uvažovány pouze záznamy PŘED tímto datem (bez tohoto data)."
+  echo "  -t TICKER                    jsou uvažovány pouze záznamy odpovídající danému tickeru."
+  echo "  -w WIDTH                     u výpisu grafů nastavuje jejich šířku, tedy délku nejdelšího řádku na WIDTH."
+  echo ""
+  echo "  DATETIME                     je formátu YYYY-MM-DD HH:MM:SS."
+  echo ""
+}
+
+COMMAND=""
+
+AFTER_DATE="0000-00-00 00:00:00"
+BEFORE_DATE="9999-99-99 99:99:99"
+
+FILE_NAME=""
+FILE=""
+
+TICKER_FILTER=""
+WIDTH=""
+
+
+while [ "$#" -gt 0 ]
+do
+  case "$1" in
+  "list-tick" | "profit" | "pos" | "last-price" | "hist-ord" | "graph-pos")
+    if [ -n "$COMMAND" ]
+      then
+      echo "ERROR-Too many COMMANDS"
+      exit 0
+    fi
+    COMMAND="$1"
+    shift
+    ;;
+
+  "-a")
+    AFTER_DATE="$2 $3"
+    shift
+    shift
+
+    ;;
+  "-b")
+    BEFORE_DATE="$2 $3"
+    shift
+    shift
+
+    ;;
+  "-t")
+    TICKER_FILTER="$2|$TICKER_FILTER"
+    shift
+    shift
+    ;;
+  "-w")
+
+    if [ -n "$WIDTH" ]
+      then
+      echo "ERROR-WIDTH can be used only once"
+      exit 0
+    fi
+
+    WIDTH="$2"
+
+    if [  $WIDTH -lt "0" ]
+      then
+      echo "ERROR-WIDTH has to be non-negative number"
+      exit 0
+    fi
+    shift
+    shift
+    ;;
+
+  "-h" | "--help")
+    Print_Help
+    exit 0
+    ;;
+
+  *".gz")
+    FILE_NAME=$1
+    FILE=`gzip -d -c $1`
+    FILES=$(echo -e "$FILES\n$FILE")
+    shift
+    ;;
+
+  * )
+    FILE_NAME=$1
+    if ! [ -f $1 ] || ! [ -r $1 ]
+      then
+      echo "ERROR-File: "$1" is not valid"
+      exit 0
+    fi
+    FILE=`cat $1`
+    FILES=$(echo -e "$FILES\n$FILE")
+    shift
+    ;;
+
+  esac
+done
+
+TICKERS_FILTER=$(echo  "\"|$TICKER_FILTER\"")
+
+if [ -n "$FILE" ]
+then
+  FILES=$(echo "$FILES" | awk 'FNR > 1 ' )
+fi
+
+if [ -z "$FILE_NAME" ]
+then
+  #echo "Waiting for data...."
+  FILES=$(cat -)
+fi
+
+FILE_DATA=$(echo "$FILES" | awk -v date_a="$AFTER_DATE" -v date_b="$BEFORE_DATE" -F ";" '{if (($1 > date_a) && ($1 < date_b)) {print $0}}')
+
+if [ -n "$TICKER_FILTER" ]
+  then
+    FILE_DATA=$(echo "$FILE_DATA" | awk -v ticker="$TICKERS_FILTER" -F ";" 'ticker ~ $2 {print $0}')
+    FILE_DATA=$(echo "$FILE_DATA" | grep -E $TICKERS_FILTER)
+fi
+
+List_Of_Tickers()
+{
+  ALL_TICKERS=$(echo "$FILE_DATA" | awk -F ";" '{ names[$2]+=$3} END {for (name in names) {printf("%s\n", name)}}'| sort)  
+}
+
+Latest_Price()
+{
+  List_Of_Tickers
+
+  Latest_price_tmp=$(for i in ${ALL_TICKERS};
+  do
+    echo "$FILE_DATA" | grep "$i" | tail -1
+  done ) 
+  LATEST_PRICES=$(echo "$Latest_price_tmp" | awk -F ";" '{print $2 " " $4}')  #posledna cena    "TICKER CENA" 
+}
+
+Max_Transactions()
+{
+  Max_Transactions_tmp=$(for i in ${ALL_TICKERS};
+    do
+          echo "$FILE_DATA" | grep -c "$i;"
+    done )
+
+    MAX_TRANSACTION=$(echo "$Max_Transactions_tmp" | sort -n | tail -n 1)        #najvacsi pocet tranzakcii
+}
+
+Holding_Positions()
+{
+  for x in $ALL_TICKERS
+    do
+      Holding_Positions_tmp2=$(echo "$FILE_DATA" | grep "$x;")
+      Holding_Positions_tmp3=$(echo "$LATEST_PRICES" | grep "$x ") 
+      
+      Holding_Positions_sell_tmp=$(echo "$Holding_Positions_tmp2" | awk -v t="sell" -F ";" 't ~ $3 {sum += $6} END {print sum}')
+      Holding_Positions_buy_tmp=$(echo "$Holding_Positions_tmp2" | awk -v t="buy" -F ";" 't ~ $3 {sum += $6} END {print sum}')
+
+      Holding_Positions_TotalHolding_tmp=`expr $Holding_Positions_buy_tmp - $Holding_Positions_sell_tmp`
+
+      Holding_Positions_result_tmp=$(echo "$Holding_Positions_tmp3" | awk -v total="$Holding_Positions_TotalHolding_tmp" '{printf "%.2f",$2 * total}')
+
+      Holding_Positions_vypis_tmp=$(echo "$Holding_Positions_result_tmp" | awk -v string="$x" '{printf "%s %.2f", string, $result}')
+      Holding_Positions_vypis2_tmp=$(echo -e "$Holding_Positions_vypis2_tmp\n$Holding_Positions_vypis_tmp\n")
+
+      
+    done
+    HOLDING_POS=$(echo "$Holding_Positions_vypis2_tmp" | awk 'FNR > 1 ')  #hodnota drzanych pozicii  "TICKER SUMA"
+}
+
+Align_Table()
+{
+  Table_Longest_tmp=$(echo "$FILE_DATA" | awk -F ":"\
+  '{
+    number=sprintf("%.2f", $2) 
+    if (length(number) > Table_Longest_tmp) {
+      Table_Longest_tmp=length(number)
+        }
+    } END {
+      print Table_Longest_tmp
+    }')
+  FILE_DATA=$(echo "$FILE_DATA" | awk -F ":" -v longestNumber="$Table_Longest_tmp"\
+  '{
+      number=sprintf("%.2f", $2) 
+      printf("%10-s: %*s\n", $1, longestNumber, number)
+      }')
+}
+
+if [ "$COMMAND" = "list-tick" ]
+  then
+    List_Of_Tickers
+    FILE_DATA=$(echo "$ALL_TICKERS") 
+fi
+
+if [ "$COMMAND" = "profit" ]
+  then
+
+    profit_sell_tmp=$(echo "$FILE_DATA" | awk -v t="sell" -F ";" 't ~ $3 {sum += ($4 * $6)} END {printf "%.2f", sum}')
+    profit_buy_tmp=$(echo "$FILE_DATA" | awk -v t="buy" -F ";" 't ~ $3 {sum += ($4 * $6)} END {printf "%.2f", sum}')
+    FILE_DATA=$( awk -v sell="$profit_sell_tmp" -v buy="$profit_buy_tmp" 'BEGIN{printf "%.2f", sell-buy}')
+fi
+
+if [ "$COMMAND" = "pos" ]
+  then
+
+    List_Of_Tickers
+    Latest_Price
+    Holding_Positions
+    
+    FILE_DATA=$(echo "$HOLDING_POS" | sort -k2,2nr | awk '{printf("%s:%.2f\n", $1, $2)}' )
+
+    Align_Table
+
+fi
+
+if [ "$COMMAND" = "last-price" ]
+  then
+
+    Latest_Price
+    FILE_DATA=$(echo "$LATEST_PRICES" | sort -k1,1 | awk '{printf("%s:%.2f\n", $1, $2)}')
+    Align_Table 
+fi
+
+if [ "$COMMAND" = "hist-ord" ]
+  then
+
+    List_Of_Tickers
+    Max_Transactions
+
+    for x in $ALL_TICKERS
+    do
+
+      No_transaction=$(echo "$FILE_DATA" | grep -c "$x;")
+
+      if [ -n "$WIDTH" ]
+        then
+
+          hist_hashtags_tmp=$(awk -v width="$WIDTH" -v max="$MAX_TRANSACTION" -v transaction="$No_transaction" 'BEGIN{printf "%.0f", ((width/max)*transaction)-0.4}')
+
+          hist_tmp=$(awk -v pocet=$hist_hashtags_tmp 'BEGIN{for(c=0;c<pocet;c++) printf "#"}')
+
+      else
+
+        hist_tmp=$(awk -v pocet=$No_transaction 'BEGIN{for(c=0;c<pocet;c++) printf "#"}')
+ 
+
+      fi
+    
+      if [ -n "$hist_tmp" ]
+        then
+
+          hist_tmp=$(echo "$hist_tmp" | awk -v tmp="$hist_tmp" '{printf " %s", tmp}')
+      fi
+
+      hist_line_tmp=$(awk -v x="$x" -v y="$hist_tmp" 'BEGIN{printf "\n%s:%s" , x, y}')
+      hist_out_tmp=$(echo -e "$hist_out_tmp$hist_line_tmp") 
+    done
+
+    FILE_DATA=$(echo "$hist_out_tmp" | awk 'FNR > 1' | awk -F ":" '{printf("%10-s:%s\n", $1, $2)}')
+fi
+
+if [ "$COMMAND" = "graph-pos" ]
+  then
+    List_Of_Tickers
+    Latest_Price
+    Holding_Positions
+    graph_max_number_tmp=$(echo "$HOLDING_POS" | awk 'function abs(v) {return v < 0 ? -v : v}{printf "%.2f\n", abs($2)}' | sort -n | tail -n 1)
+    
+    for x in $ALL_TICKERS
+    do
+      graph_pos_tmp=$(echo "$HOLDING_POS" | grep "$x ") 
+      graph_tmp=$(echo "$graph_pos_tmp" | awk '{printf "%.2f", $2}')
+      int_graph_tmp=$(echo | awk -v cislo="$graph_tmp" '{printf "%d", (cislo*100) }')
+
+        if [ -n "$WIDTH" ]
+          then
+            graph_width_tmp=$(awk -v width="$WIDTH" -v max="$graph_max_number_tmp" -v pocet="$graph_tmp" 'BEGIN{print (width/max)*pocet}')
+            
+            if [ "$int_graph_tmp" -lt "0" ]
+              then
+                graph_tmp_abs=$(echo "$graph_width_tmp" | awk 'function abs(v) {return v < 0 ? -v : v}{printf "%.2f\n", abs($0)}')
+                graph_width_rounded=$(awk -v pocet="$graph_tmp_abs" 'BEGIN{printf "%0.f", (pocet-0.5)}')
+                graph_tmp2=$(awk -v pocet=$graph_width_rounded 'BEGIN{for(c=0;c<(pocet);c++) printf "!"}')
+              else
+                graph_width_rounded=$(awk -v pocet="$graph_width_tmp" 'BEGIN{printf "%0.f", (pocet-0.5)}')
+                graph_tmp2=$(awk -v pocet="$graph_width_rounded" 'BEGIN{for(c=0;c<(pocet);c++) printf "#"}')
+            fi  
+
+          else
+            if [ "$int_graph_tmp" -lt "0" ]
+              then
+                graph_tmp_abs=$(echo "$graph_width_tmp" | awk 'function abs(v) {return v < 0 ? -v : v}{printf "%.2f\n", abs($0)}')
+                graph_width_tmp=$(awk -v pocet="$graph_tmp" 'BEGIN{printf "%0.f", (pocet-0.5)}')
+                graph_tmp2=$(awk -v pocet=$graph_tmp_abs 'BEGIN{for(c=0;c<(pocet/1000);c++) printf "!"}')
+              else
+                graph_width_tmp=$(awk -v pocet="$graph_tmp" 'BEGIN{printf "%0.f", (pocet-0.5)}')
+                graph_tmp2=$(awk -v pocet="$graph_width_tmp" 'BEGIN{for(c=0;c<(pocet/1000);c++) printf "#"}')
+            fi
+        fi
+      if [ -n "$graph_tmp2" ]
+        then
+
+          graph_tmp2=$(echo "$graph_tmp2" | awk -v tmp="$graph_tmp2" '{printf " %s", tmp}')
+      fi
+
+      graph_line_tmp=$(awk -v x="$x" -v y="$graph_tmp2" 'BEGIN{printf "\n%s:%s" , x, y}')
+      graph_out_tmp=$(echo -e "$graph_out_tmp$graph_line_tmp") 
+    done
+
+    FILE_DATA=$(echo "$graph_out_tmp" | awk 'FNR > 1' | awk -F ":" '{printf("%10-s:%s\n", $1, $2)}')
+    
+fi
+
+echo "$FILE_DATA"

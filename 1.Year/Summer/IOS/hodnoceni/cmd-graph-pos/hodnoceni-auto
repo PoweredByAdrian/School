@@ -1,0 +1,35 @@
+0:cmd-graph-pos: prikaz graph-pos
+# ./tradelog graph-pos test.log <stdin >>stdout 2>>stderr; echo $? >>errcode
+# diff -u stdout.ref stdout
+#   --- stdout.ref
+#   +++ stdout
+#   @@ -1,9 +1,9 @@
+#   -AAPL      : ####
+#   -ASML      : !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#   -BHP       : !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#   -CVX       : ########
+#   -DIS       : ################
+#   -MSFT      : !!!!!
+#   -PFE       : !
+#   -TM        : !!!!!!!!!
+#   -WMT       : !!!!!!!!
+#   +AAPL      :
+#   +ASML      :
+#   +BHP       :
+#   +CVX       :
+#   +DIS       :
+#   +MSFT      :
+#   +PFE       :
+#   +TM        :
+#   +WMT       :
+# diff -u stderr.ref stderr
+#   --- stderr.ref
+#   +++ stderr
+#   @@ -0,0 +1,7 @@
+#   +expr: syntax error
+#   +expr: syntax error
+#   +expr: syntax error
+#   +expr: syntax error
+#   +expr: syntax error
+#   +expr: syntax error
+#   +expr: syntax error

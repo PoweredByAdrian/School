@@ -1,0 +1,21 @@
+0:cmd-last-price: prikaz last-price
+# ./tradelog last-price test.log <stdin >>stdout 2>>stderr; echo $? >>errcode
+# diff -u stdout.ref stdout
+#   --- stdout.ref
+#   +++ stdout
+#   @@ -6,6 +6,7 @@
+#    AMZN      : 3239.24
+#    ASML      :  533.94
+#    AVGO      :  503.88
+#   +AVGO      :  503.88
+#    BABA      :  258.98
+#    BAC       :   34.58
+#    BHP       :   74.83
+#   @@ -43,7 +44,6 @@
+#    TSLA      :  704.22
+#    TSM       :  133.54
+#    UNH       :  301.76
+#   -V         :  223.17
+#    VZ        :   55.29
+#    WMT       :  126.31
+#    XOM       :   57.99

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ijatool">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/ija/ija2022/homework2/ijatool.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"Game"},{"l":"Game.Entities"},{"l":"Game.Fields"},{"l":"Game.MazeBoard"},{"l":"Game.MazeObjects"},{"l":"Interfaces"},{"l":"PacmanGUI"}];updateSearchResults();

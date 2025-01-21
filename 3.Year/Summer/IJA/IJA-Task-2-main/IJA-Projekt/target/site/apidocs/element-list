@@ -1,0 +1,7 @@
+Game
+Game.Entities
+Game.Fields
+Game.MazeBoard
+Game.MazeObjects
+Interfaces
+PacmanGUI

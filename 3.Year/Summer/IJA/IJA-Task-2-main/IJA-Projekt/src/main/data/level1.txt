@@ -1,0 +1,16 @@
+15 15
+.....XXXXX.....
+GXXX.......XXXG
+.X...XX.XX...X.
+.X.X.......X.X.
+.....XX.XX.....
+X.X.XX.G.XX.X.X
+X.X....X....X.X
+X.XXXX.X.XXXX.X
+X.X....X....X.X
+X.X.XX.G.XX.X.X
+.....XX.XX.....
+.X.X.......X.X.
+.X...XX.XX...X.
+.XXX...S...XXX.
+.....XXXXX.K..T
